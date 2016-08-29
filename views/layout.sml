@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    block(name='meta')
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge, chrome=1')
+      meta(name='description' content='Reshape is a tool for transforming html using javascript plugins. Check it out!')
+      meta(name='author' content='Jeff Escalante')
+      meta(name='viewport' content='width=device-width, initial-scale=1')
+      title Reshape :: Transform HTML with JS Plugins
+      script(src='https://use.typekit.net/sfm5fvo.js')
+      script try{Typekit.load({ async: true });}catch(e){}
+      link(rel='stylesheet' href='css/index.css')
+  body(role='document')
+    main(role='main')
+      header: h1 Reshape
+      nav
+        a(href='#install') Install & Use
+        a(href='https://github.com/reshape/reshape#usage') Docs
+        a(href='http://plugins.reshape.ml') Plugins
+        a(href='https://gitter.im/reshape/reshape') Support
+      block(name='content')
+    script(src='js/main.js' defer)

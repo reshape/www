@@ -1,0 +1,37 @@
+@import '_global.sss'
+
+h2
+  text-align: center
+  font-weight: normal
+  color: var(--dark-blue)
+  font-size: 1.4em
+  line-height: 1.7em
+  margin: 2em
+
+  & a
+    color: var(--dark-blue)
+    text-decoration: none
+    font-weight: 500
+
+.gh
+  background: var(--blue)
+  padding: 17px 30px
+  border-radius: 5px
+  color: white
+  text-decoration: none
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 1.1em
+  align-self: center
+  display: flex
+  align-content: center
+  transition: background .25s ease
+
+  &:hover
+    background: color(var(--blue) shade(15%))
+
+  & .icon
+    width: 30px
+    height: 30px
+    background: url('/img/github-icon.svg')
+    margin-right: 15px

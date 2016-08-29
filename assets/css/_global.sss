@@ -1,0 +1,55 @@
+/* colors */
+:root
+  --blue: #3487D0
+  --dark-blue: #22405C
+  --light-blue: #F2F9FF
+
+body
+  font-family: freight-sans-pro, sans-serif
+  -webkit-font-smoothing: antialiased
+  font-size: 18px
+  margin: 0
+  padding: 0
+
+header
+  background: url('/img/header-bg.png') center center / cover no-repeat
+  display: flex
+  justify-content: center
+  align-content: center
+  padding: 13vw 0
+
+  & h1
+    margin: 0
+    border: 0
+    font: 0/0 a
+    text-shadow: none
+    color: transparent
+    background: url('/img/logo.svg') center center / 31.4vw 7vw
+    width: 31.4vw
+    height: 7vw
+
+nav
+  background: var(--dark-blue)
+  text-align: center
+  padding: 18px
+
+  & a
+    text-decoration: none
+    text-transform: uppercase
+    font-weight: bold
+    color: white
+    margin-right: 30px
+    transition: opacity .25s ease
+    font-size: 16px
+
+    &:hover
+      opacity: .8
+
+    &:last-child
+      margin-right: 0
+
+.container
+  max-width: 850px
+  margin: 0 auto
+  display: flex
+  flex-direction: column
