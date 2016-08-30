@@ -30,6 +30,7 @@
     display: flex
     align-items: center
     transition: background .25s ease
+    margin-bottom: 1.2em
 
     &:hover
       background: color(var(--blue) shade(15%))
@@ -46,6 +47,7 @@
   flex-flow: row
 
   & pre
+    margin: 0
     background: var(--dark-blue)
     color: white
     border-radius: 5px
@@ -62,3 +64,60 @@
     background: url('/img/arrow.svg') center center no-repeat
     align-self: center
     padding: 0 20px
+
+#features
+
+  & h3
+    text-align: center
+
+  & ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  & li
+    background: var(--light-blue)
+    color: var(--dark-blue)
+    display: flex
+    margin-bottom: 35px
+
+    &:nth-child(even)
+      flex-flow: row-reverse
+
+  & .icon
+    background-color: var(--dark-blue)
+    background-position: center center
+    background-repeat: no-repeat
+    flex-basis: auto|<'width' (%|rem|em|px)>;
+    flex-basis: 25%
+
+    &.globe
+      background-image: url('/img/globe-icon.svg')
+
+    &.plug
+      background-image: url('/img/plug-icon.svg')
+
+    &.swap
+      background-image: url('/img/swap-icon.svg')
+
+    &.tools
+      background-image: url('/img/tools-icon.svg')
+
+    &.flag
+      background-image: url('/img/flag-icon.svg')
+
+  & p
+    flex-basis: 75%
+    padding: 50px
+    margin: 0
+    line-height: 1.5em
+
+    & a
+      color: var(--dark-blue)
+      text-decoration: none
+      font-weight: 500
+      border-bottom: 1px solid color(var(--dark-blue) tint(80%))
+      transition: all .25s ease
+
+      &:hover
+        border-bottom-color: color(var(--dark-blue) tint(40%))
