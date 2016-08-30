@@ -10,10 +10,7 @@ module.exports = {
   },
   ignore: ['**/layout.sml', '**/_*', '**/.*'],
   reshape: (ctx) => {
-    return htmlStandards({
-      webpack: ctx,
-      locals: { foo: 'bar' }
-    })
+    return htmlStandards({ webpack: ctx, delimiters: ['<%', '%>'], retext: [] })
   },
   postcss: (ctx) => {
     return cssStandards({ webpack: ctx })

@@ -1,37 +1,64 @@
 @import '_global.sss'
+@import '_syntax.sss'
 
-h2
-  text-align: center
-  font-weight: normal
-  color: var(--dark-blue)
-  font-size: 1.4em
-  line-height: 1.7em
-  margin: 2em
+#intro
+  margin-bottom: 2em
 
-  & a
+  & h2
+    text-align: center
+    font-weight: normal
     color: var(--dark-blue)
+    font-size: 1.4em
+    line-height: 1.7em
+    margin: 2em
+
+    & a
+      color: var(--dark-blue)
+      text-decoration: none
+      font-weight: 500
+
+  & .gh
+    background: var(--blue)
+    padding: 17px 30px
+    border-radius: 5px
+    color: white
     text-decoration: none
-    font-weight: 500
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 1.1em
+    align-self: center
+    display: flex
+    align-items: center
+    transition: background .25s ease
 
-.gh
-  background: var(--blue)
-  padding: 17px 30px
-  border-radius: 5px
-  color: white
-  text-decoration: none
-  text-transform: uppercase
-  font-weight: bold
-  font-size: 1.1em
-  align-self: center
+    &:hover
+      background: color(var(--blue) shade(15%))
+
+    & .icon
+      width: 30px
+      height: 30px
+      background: url('/img/github-icon.svg')
+      margin-right: 15px
+
+#example
+  font-size: 14px
   display: flex
-  align-content: center
-  transition: background .25s ease
+  flex-flow: row
 
-  &:hover
-    background: color(var(--blue) shade(15%))
+  & pre
+    background: var(--dark-blue)
+    color: white
+    border-radius: 5px
+    padding: 20px
+    width: 33%
+    white-space: pre-wrap
 
-  & .icon
-    width: 30px
-    height: 30px
-    background: url('/img/github-icon.svg')
-    margin-right: 15px
+    &.middle
+      width: 50%
+
+  & .arrow
+    width: 24px
+    height: 35px
+    background: url('/img/arrow.svg') center center no-repeat
+    align-self: center
+    padding: 0 20px

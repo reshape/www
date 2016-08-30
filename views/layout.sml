@@ -1,5 +1,6 @@
 doctype html
 html
+
   head
     block(name='meta')
       meta(charset='utf-8')
@@ -11,13 +12,20 @@ html
       script(src='https://use.typekit.net/sfm5fvo.js')
       script try{Typekit.load({ async: true });}catch(e){}
       link(rel='stylesheet' href='css/index.css')
+
   body(role='document')
     main(role='main')
       header: h1 Reshape
+
       nav
         a(href='#install') Install & Use
         a(href='https://github.com/reshape/reshape#usage') Docs
         a(href='http://plugins.reshape.ml') Plugins
         a(href='https://gitter.im/reshape/reshape') Support
+
       block(name='content')
+
+      footer
+        a(href='https://carrot.is') Built at carrot
+
     script(src='js/main.js' defer)
