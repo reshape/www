@@ -29,3 +29,12 @@ extends(src='layout.sml')
         li
           .icon.tools
           p(md) If a feature exists, you can use it with reshape. We already have plugins for [layouts](https://github.com/reshape/layouts), [includes](https://github.com/reshape/include), [loops](https://github.com/reshape/expressions#locals), [conditionals](https://github.com/reshape/expressions#conditional-logic), and more.
+
+    #install.container
+      h3 Getting Started
+
+      p(md) Reshape is written in [node.js](https://nodejs.org) and can be used with node v6 or higher. You can install it through npm as such:
+
+      pre npm install reshape
+
+      p(md) Reshape has a very simple API. Just call it as a function, passing in optional filename, plugins, parser, and/or generator, call `.process(html)` with some html, and it will return a promise containing the output, just like the example at the top of this page. For more details, [check out the readme on github](https://github.com/reshape/reshape).

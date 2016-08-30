@@ -12,11 +12,6 @@
     line-height: 1.7em
     margin: 2em
 
-    & a
-      color: var(--dark-blue)
-      text-decoration: none
-      font-weight: 500
-
   & .gh
     background: var(--blue)
     padding: 17px 30px
@@ -42,7 +37,7 @@
       margin-right: 15px
 
 #example
-  font-size: 14px
+  font-size: 15px
   display: flex
   flex-flow: row
 
@@ -54,6 +49,7 @@
     padding: 20px
     width: 33%
     white-space: pre-wrap
+    font-family: inconsolata
 
     &.middle
       width: 50%
@@ -84,6 +80,9 @@
     &:nth-child(even)
       flex-flow: row-reverse
 
+    &:last-child
+      margin-bottom: 0
+
   & .icon
     background-color: var(--dark-blue)
     background-position: center center
@@ -112,12 +111,25 @@
     margin: 0
     line-height: 1.5em
 
-    & a
-      color: var(--dark-blue)
-      text-decoration: none
-      font-weight: 500
-      border-bottom: 1px solid color(var(--dark-blue) tint(80%))
-      transition: all .25s ease
+#install
 
-      &:hover
-        border-bottom-color: color(var(--dark-blue) tint(40%))
+  & h3
+    align-self: center
+
+  & p
+    color: var(--dark-blue)
+    margin: 0 0 1em 0
+    line-height: 1.4em
+
+  & pre
+    margin: 1em 0 2em 0
+    align-self: center
+    background: var(--light-blue)
+    color: var(--dark-blue)
+    font-family: inconsolata
+    padding: 13px 100px
+
+  & code
+    font-family: inconsolata
+    font-size: 17px
+    color: var(--blue)
