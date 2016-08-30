@@ -26,6 +26,4 @@ html
       block(name='content')
 
       footer
-        a(href='https://carrot.is') Built at carrot
-
-    script(src='js/main.js' defer)
+        a(href='https://carrot.is') Built at Carrot

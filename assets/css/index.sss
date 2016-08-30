@@ -10,7 +10,13 @@
     color: var(--dark-blue)
     font-size: 1.4em
     line-height: 1.7em
-    margin: 2em
+    margin: 2em 0
+
+    @media (max-width: 840px)
+      font-size: 1.2em
+
+    @media (max-width: 650px)
+      font-size: 1em
 
   & .gh
     background: var(--blue)
@@ -27,6 +33,10 @@
     transition: background .25s ease
     margin-bottom: 1.2em
 
+    @media (max-width: 650px)
+      font-size: 0.9em
+      padding: 12px 25px
+
     &:hover
       background: color(var(--blue) shade(15%))
 
@@ -41,6 +51,10 @@
   display: flex
   flex-flow: row
 
+  @media (max-width: 920px)
+    flex-flow: column
+    align-items: center
+
   & pre
     margin: 0
     background: var(--dark-blue)
@@ -54,12 +68,27 @@
     &.middle
       width: 50%
 
+      @media (max-width: 920px)
+        width: 70%
+
+      @media (max-width: 550px)
+        width: 90%
+
+    @media (max-width: 920px)
+      width: 70%
+
+    @media (max-width: 550px)
+      width: 90%
+
   & .arrow
     width: 24px
     height: 35px
     background: url('/img/arrow.svg') center center no-repeat
     align-self: center
     padding: 0 20px
+
+    @media (max-width: 920px)
+      background: none
 
 #features
 
@@ -90,6 +119,9 @@
     flex-basis: auto|<'width' (%|rem|em|px)>;
     flex-basis: 25%
 
+    @media (max-width: 650px)
+      display: none
+
     &.globe
       background-image: url('/img/globe-icon.svg')
 
@@ -110,6 +142,9 @@
     padding: 50px
     margin: 0
     line-height: 1.5em
+
+    @media (max-width: 650px)
+      flex-basis: auto
 
 #install
 
