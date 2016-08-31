@@ -12,6 +12,7 @@ html
       script(src='https://use.typekit.net/sfm5fvo.js')
       script try{Typekit.load({ async: true });}catch(e){}
       link(rel='stylesheet' href='css/index.css')
+      link(rel='icon', type='image/png', href='img/favicon.png')
 
   body(role='document')
     main(role='main')
