@@ -60,10 +60,35 @@
     background: var(--dark-blue)
     color: white
     border-radius: 5px
-    padding: 20px
+    padding: 20px 20px 50px
+    position: relative
     width: 33%
     white-space: pre-wrap
     font-family: inconsolata
+    border: 1px solid green
+
+    // Labels for the code blocks
+    &::after
+      font-family: freight-sans-pro, sans-serif
+      font-weight: bold
+      background: color(var(--blue) alpha(-50%))
+      border-radius: 0 5px 0 0
+      color: white
+      position: absolute
+      bottom: 0
+      left: 0
+      padding: 6px 12px
+
+    &.input::after
+      content: 'Input'
+
+    &.process::after
+      content: 'Process'
+
+    &.output::after
+      content: 'Output'
+
+
 
     &.middle
       width: 50%
@@ -94,6 +119,7 @@
 
   & h3
     text-align: center
+    margin-top: 70px
 
   & ul
     margin: 0
