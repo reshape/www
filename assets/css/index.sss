@@ -60,10 +60,34 @@
     background: var(--dark-blue)
     color: white
     border-radius: 5px
-    padding: 20px
+    padding: 20px 20px 50px
+    position: relative
     width: 33%
     white-space: pre-wrap
     font-family: inconsolata
+
+    // Labels for the code blocks
+    &::after
+      font-family: freight-sans-pro, sans-serif
+      font-weight: bold
+      background: color(var(--blue) alpha(-50%))
+      border-radius: 0 5px 0 5px
+      color: white
+      position: absolute
+      bottom: 0
+      left: 0
+      padding: 6px 12px
+
+    &.input::after
+      content: 'Input'
+
+    &.process::after
+      content: 'Process'
+
+    &.output::after
+      content: 'Output'
+
+
 
     &.middle
       width: 50%
@@ -94,6 +118,7 @@
 
   & h3
     text-align: center
+    margin-top: 70px
 
   & ul
     margin: 0
@@ -109,15 +134,28 @@
     &:nth-child(even)
       flex-flow: row-reverse
 
+    // icon bg colors
+    &:nth-child(2) .icon
+      background-color: #3899f1
+
+    &:nth-child(3) .icon
+      background-color: #246ebb
+
+    &:nth-child(4) .icon
+      background-color: #1a5b9c
+
+    &:nth-child(5) .icon
+      background-color: #0d345c
+
     &:last-child
       margin-bottom: 0
 
   & .icon
-    background-color: var(--dark-blue)
+    background-color: #4cbff8
     background-position: center center
     background-repeat: no-repeat
-    flex-basis: auto|<'width' (%|rem|em|px)>;
-    flex-basis: 25%
+    flex-basis: auto|<'width' (%|rem|em|px)>
+    flex-basis: 20%
 
     @media (max-width: 650px)
       display: none
