@@ -135,15 +135,28 @@
     &:nth-child(even)
       flex-flow: row-reverse
 
+    // icon bg colors
+    &:nth-child(2) .icon
+      background-color: #3899f1
+
+    &:nth-child(3) .icon
+      background-color: #246ebb
+
+    &:nth-child(4) .icon
+      background-color: #1a5b9c
+
+    &:nth-child(5) .icon
+      background-color: #0d345c
+
     &:last-child
       margin-bottom: 0
 
   & .icon
-    background-color: var(--dark-blue)
+    background-color: #4cbff8
     background-position: center center
     background-repeat: no-repeat
-    flex-basis: auto|<'width' (%|rem|em|px)>;
-    flex-basis: 25%
+    flex-basis: auto|<'width' (%|rem|em|px)>
+    flex-basis: 20%
 
     @media (max-width: 650px)
       display: none
