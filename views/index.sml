@@ -10,13 +10,34 @@ extends(src='layout.sml')
     #example.container.xl
       include(src='_code_examples.sml')
 
+    #try.container
+      h3 Try It Out!
+
+      #tonic
+        | const reshape = require('reshape')
+        | const standard = require('reshape-standard')
+        |
+        | const html = `doctype html
+        | head
+        |   title testing!
+        | body
+        |   p hello {{ name }}!
+        |   ul
+        |     each(loop='number of [1,2,3]')
+        |       li {{ number }}
+        | `
+        |
+        | return await reshape(standard())
+        |   .process(html)
+        |   .then((res) => res.output({ name: 'world' }))
+
     #features.container
       h3 We've Got Features for Days!
 
       ul
         li
           .icon.swap
-          p(md) Accepts custom parsers too, so you can replicate any templating language. We made a language that [almost exactly matches jade’s features](https://github.com/reshape/sugarml#example) : )
+          p(md) Accepts custom parsers too, so you can replicate any templating language. We made a language that [almost exactly matches jade/pug’s features](https://github.com/reshape/standard#example) : )
         li
           .icon.globe
           p Can produce client-side templates for rich javascript apps, or static html. Works in static sites and on servers!

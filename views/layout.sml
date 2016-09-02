@@ -28,3 +28,5 @@ html
 
       footer
         a(href='https://carrot.is') Built at Carrot
+
+      script(src='https://embed.tonicdev.com' data-element-id='tonic' data-node-version='6')
