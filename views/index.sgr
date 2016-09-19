@@ -1,0 +1,61 @@
+extends(src='layout.sgr')
+  block(name='content')
+    #intro.container
+      h2(md) Reshape is a tool for transforming static html with javascript plugins.<br>Think of it like [postcss](http://postcss.org/) or [babel](http://babeljs.io/), but for html.
+
+      a.gh(href='https://github.com/reshape/reshape')
+        .icon
+        span Source on Github
+
+    #example.container.xl
+      include(src='_code_examples.sgr')
+
+    #try.container
+      h3 Try It Out!
+
+      #tonic.
+        const reshape = require('reshape')
+        const standard = require('reshape-standard')
+
+        const html = `doctype html
+        head
+          title testing!
+        body
+          p hello {{ name }}!
+          ul
+            each(loop='number of [1,2,3]')
+              li {{ number }}
+        `
+
+        return await reshape(standard())
+          .process(html)
+          .then((res) => res.output({ name: 'world' }))
+
+    #features.container
+      h3 We've Got Features for Days!
+
+      ul
+        li
+          .icon.swap
+          .text(md) Accepts custom parsers too, so you can replicate any templating language. We made a language that [almost exactly matches jade/pug’s features](https://github.com/reshape/standard#example) : )
+        li
+          .icon.globe
+          .text: p Can produce client-side templates for rich javascript apps, or static html. Works in static sites and on servers!
+        li
+          .icon.plug
+          .text(md) Reshape’s simple, clear plugin API makes it easy to make your own plugin. Plus, we have tons in the [plugin directory](http://plugins.reshape.ml)!
+        li
+          .icon.flag
+          .text(md) Super clear and explicit [error traces](https://github.com/reshape/reshape#error-handling) mean no confusion for users when dealing with any plugin!
+        li
+          .icon.tools
+          .text(md) If a feature exists, you can use it with reshape. We already have plugins for [layouts](https://github.com/reshape/layouts), [includes](https://github.com/reshape/include), [loops](https://github.com/reshape/expressions#locals), [conditionals](https://github.com/reshape/expressions#conditional-logic), and more.
+
+    #install.container
+      h3 Getting Started
+
+      p(md) Reshape is written in [node.js](https://nodejs.org) and can be used with node v6 or higher. You can install it through npm as such:
+
+      pre npm install reshape
+
+      p(md) Reshape has a very simple API. Just call it as a function, passing in optional filename, plugins, parser, and/or generator, call `.process(html)` with some html, and it will return a promise containing the output, just like the example at the top of this page. For more details, [check out the readme on github](https://github.com/reshape/reshape).

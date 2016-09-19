@@ -5,10 +5,10 @@ const latest = require('babel-preset-latest')
 module.exports = {
   devtool: 'source-map',
   matchers: {
-    html: '**/*.sml',
+    html: '**/*.sgr',
     css: '**/*.sss'
   },
-  ignore: ['**/layout.sml', '**/_*', '**/.*'],
+  ignore: ['**/layout.sgr', '**/_*', '**/.*'],
   reshape: (ctx) => {
     return htmlStandards({ webpack: ctx, delimiters: ['<%', '%>'], retext: [] })
   },
