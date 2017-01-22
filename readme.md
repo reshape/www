@@ -1,5 +1,7 @@
 # www.reshape.ml
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/reshape/www.svg)](https://greenkeeper.io/)
+
 reshape's web presence
 
 ## Setup
