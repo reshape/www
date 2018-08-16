@@ -21,7 +21,7 @@ html
       nav
         a(href='#install') Install & Use
         a(href='https://github.com/reshape/reshape#usage') Docs
-        a(href='http://plugins.reshape.ml') Plugins
+        a(href='http://reshape-plugins.netlify.com/') Plugins
         a(href='https://gitter.im/reshape/reshape') Support
 
       block(name='content')
