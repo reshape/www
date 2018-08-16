@@ -43,7 +43,7 @@ extends(src='layout.sgr')
           .text: p Can produce client-side templates for rich javascript apps, or static html. Works in static sites and on servers!
         li
           .icon.plug
-          .text(md) Reshape’s simple, clear plugin API makes it easy to make your own plugin. Plus, we have tons in the [plugin directory](http://plugins.reshape.ml)!
+          .text(md) Reshape’s simple, clear plugin API makes it easy to make your own plugin. Plus, we have tons in the [plugin directory](http://reshape-plugins.netlify.com/)!
         li
           .icon.flag
           .text(md) Super clear and explicit [error traces](https://github.com/reshape/reshape#error-handling) mean no confusion for users when dealing with any plugin!
